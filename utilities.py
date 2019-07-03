@@ -26,8 +26,8 @@ def compute_gc_content(dna_seq):
     return (nuc_count['G'] + nuc_count['C'])/dna_size
 
 
-def compute_reverse_complement(dnaseq):
-    dna_comp = compute_dna_complement(dnaseq)
+def compute_reverse_complement(dna_seq):
+    dna_comp = compute_dna_complement(dna_seq)
     return dna_comp[::-1] # returns the reverse of dna_comp string
 
 
@@ -49,6 +49,6 @@ def count_nucleotides(seq):
     return nuc_counter
 
 
-def thymine_to_uracil(dnaseq):
-    rnaseq = dnaseq.replace("T", "U")
+def thymine_to_uracil(dna_seq):
+    rnaseq = dna_seq.replace("T", "U")
     return rnaseq
