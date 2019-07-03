@@ -19,6 +19,18 @@ def compute_dna_complement(dna_seq):
     return seq_c
 
 
+def compute_gc_content(dna_seq):
+    dna_size = len(dna_seq)
+    nuc_count = count_nucleotides(dna_seq)
+
+    return (nuc_count['G'] + nuc_count['C'])/dna_size
+
+
+def compute_reverse_complement(dnaseq):
+    dna_comp = compute_dna_complement(dnaseq)
+    return dna_comp[::-1] # returns the reverse of dna_comp string
+
+
 def count_nucleotides(seq):
     nuc_counter = {'A': 0, 'C': 0, 'G': 0, 'T': 0, 'U': 0}
     for nuc in seq:
@@ -35,11 +47,6 @@ def count_nucleotides(seq):
         else:
             raise ValueError("Unrecognized nucleotide")
     return nuc_counter
-
-
-def compute_reverse_complement(dnaseq):
-    dna_comp = compute_dna_complement(dnaseq)
-    return dna_comp[::-1] # returns the reverse of dna_comp string
 
 
 def thymine_to_uracil(dnaseq):
