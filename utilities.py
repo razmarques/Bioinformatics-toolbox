@@ -50,5 +50,5 @@ def count_nucleotides(seq):
 
 
 def thymine_to_uracil(dna_seq):
-    rnaseq = dna_seq.replace("T", "U")
-    return rnaseq
+    rna_seq = dna_seq.replace("T", "U")
+    return rna_seq
