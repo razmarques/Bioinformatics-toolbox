@@ -49,6 +49,21 @@ def count_nucleotides(seq):
     return nuc_counter
 
 
+def count_point_mutations(seq_1, seq_2):
+    """
+    This function computes the number of point mutations of two sequences of equal length.
+    This is equivalent to the Hammond distance between two strings
+    """
+    if not len(seq_1) == len(seq_2):
+        raise ValueError("The sequences in both arguments should be of equal length")
+
+    counter = 0
+    for inuc in range(len(seq_1)):
+        if not seq_1[inuc] == seq_2[inuc]:
+            counter += 1
+    return counter
+
+
 def thymine_to_uracil(dna_seq):
     rna_seq = dna_seq.replace("T", "U")
     return rna_seq

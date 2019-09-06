@@ -104,5 +104,4 @@ venv.bak/
 .mypy_cache/
 
 # Additional directories
-tests/
-rosalind/
+tests.py
